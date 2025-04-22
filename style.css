@@ -710,3 +710,157 @@ footer {
         width: 80%;
         margin-bottom: 10px;
     }}
+
+/* Existing CSS rules */
+
+/* --- Mobile Styles (typically for screens up to 768px width) --- */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 95%; /* Or a specific pixel value */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Navigation */
+  .nav-links {
+    display: none; /* Hide the full navigation by default on mobile */
+    flex-direction: column;
+    background-color: #your-nav-background-color; /* Add a background */
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensure it's above other content */
+  }
+
+  .nav-links.active { /* Class added by JavaScript to show the menu */
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger menu on mobile */
+    cursor: pointer;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    margin: 10px 0;
+    width: 80%; /* Adjust button width */
+    text-align: center;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-bottom: 30px;
+    text-align: center; /* Center the image */
+  }
+
+  .about-image img {
+    width: 80%; /* Adjust image width */
+    max-width: 300px; /* Optional: set a maximum width */
+    height: auto;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .skill-card {
+    margin-bottom: 20px;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .project-card {
+    margin-bottom: 30px;
+  }
+
+  .project-image img {
+    width: 100%; /* Make project images full width */
+    height: auto;
+  }
+
+  /* Contact Section */
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 90%; /* Adjust form width */
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 10px 0;
+  }
+}
+
+/* --- Tablet Styles (typically for screens between 769px and 1024px) --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* You might adjust grid layouts to have 2 columns here */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Example */
+  }
+
+  .about-content {
+    /* Maintain or slightly adjust the row layout */
+  }
+}
+
+/* --- Desktop Styles (typically for screens larger than 1024px) --- */
+/* Your existing CSS should largely handle this */
